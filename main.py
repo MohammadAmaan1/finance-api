@@ -23,8 +23,10 @@ app.add_middleware(
 )
 
 # ---------- MODEL LOAD (correct path) ----------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = folder jahan main.py pada hai
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "models", "final_model.pkl")
+
 
 print("Loading model from:", MODEL_PATH)
 
