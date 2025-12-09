@@ -1,0 +1,19 @@
+Demo Script - Loan Approval Prediction API
+
+Hi, my name is Mohammad Amaan.
+This is my Loan Approval Prediction API built using Machine Learning and FastAPI.
+
+Features:
+- Live loan approval prediction using ML model
+- Health check endpoint
+- Model info endpoint
+- JSON-based prediction endpoint
+
+Steps in demo:
+1. Open /health to show server is running
+2. Open /info to show model metadata
+3. Use Postman to send /predict request
+4. Show Approved/Rejected response with probability
+
+This API is deployed on Render and can be integrated into websites, dashboards, or mobile apps.
+Thank you.
