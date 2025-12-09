@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "0d1e8715-5c10-49bb-918b-f36760887221",
+		"name": "Loan_Approval_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50651234",
+		"_collection_link": "https://amaan09090909-5537447.postman.co/workspace/Mohammad-Amaan's-Workspace~bc276cae-855a-42ae-8554-275d9398962a/collection/50651234-0d1e8715-5c10-49bb-918b-f36760887221?action=share&source=collection_link&creator=50651234"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finance-api-i7tn.onrender.com",
+					"protocol": "https",
+					"host": [
+						"finance-api-i7tn",
+						"onrender",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finance-api-i7tn.onrender.com/info",
+					"protocol": "https",
+					"host": [
+						"finance-api-i7tn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"no_of_dependents\": 2,\n  \"education\": 1,\n  \"self_employed\": 0,\n  \"income_annum\": 900000,\n  \"loan_amount\": 350000,\n  \"loan_term\": 120,\n  \"cibil_score\": 760,\n  \"residential_assets_value\": 500000,\n  \"commercial_assets_value\": 0,\n  \"luxury_assets_value\": 0,\n  \"bank_asset_value\": 200000,\n  \"total_income\": 900000,\n  \"loan_to_income_ratio\": 0.35,\n  \"total_assets\": 700000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finance-api-i7tn.onrender.com/predict",
+					"protocol": "https",
+					"host": [
+						"finance-api-i7tn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"predict"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		}
+	]
+}
